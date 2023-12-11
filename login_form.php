@@ -6,27 +6,16 @@ session_start();
 
 if (isset($_POST['submit'])) {
    $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $pass = md5($_POST['password']);
+   $password = md5($_POST['password']);
 
-   $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
+   $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$password' ";
 
    $result = mysqli_query($conn, $select);
 
    if (mysqli_num_rows($result) > 0){
-
       $row = mysqli_fetch_array($result);
-
-      if($row['user_type'] == 'admin'){
-
-         $_SESSION['admin_name'] = $row['name'];
-         header('location:admin_page.php');
-
-      } elseif ($row['user_type'] == 'user'){
-
-         $_SESSION['user_name'] = $row['name'];
-         header('location:user_page.php');
-
-      }
+      $_SESSION['admin_name'] = $row['first_name'];
+      header('location:admin_page.php');
      
    }else{
       $error[] = 'incorrect email or password!';
@@ -108,7 +97,7 @@ if (isset($_POST['submit'])) {
    
 <div class="d-flex flex-column min-vh-100">
    <div class="row justify-content-center">
-      <div class="form-control opacity-75 " id="form">
+      <div class="form-control " id="form">
          <form action="" method="post" id="login" >
             <h3 class="text-center mb-4">Login Now</h3>
 
