@@ -119,7 +119,8 @@ if (isset($_POST['submit'])) {
                   name="fname"
                   id="fname"
                   required
-                  maxlength="43"
+                  minlength="3"
+                  maxlength="50"
                   class="form-control form-control-lg" />
             </div>
             <div>
@@ -129,7 +130,8 @@ if (isset($_POST['submit'])) {
                   name="lname"
                   id="lname"
                   required
-                  maxlength="43"
+                  minlength="3"
+                  maxlength="50"
                   class="form-control form-control-lg" />
             </div>
             <div class="mb-3 position-relative">
@@ -139,7 +141,6 @@ if (isset($_POST['submit'])) {
                   name="email"
                   id="email"
                   required
-                  maxlength="43"
                   class="form-control form-control-lg" />
             </div>
             <div>
@@ -149,6 +150,7 @@ if (isset($_POST['submit'])) {
             name="number"
             id="number"
             required
+            minlength="0"
             maxlength="11"
             class="form-control form-control-lg" />
         </div>
@@ -159,7 +161,8 @@ if (isset($_POST['submit'])) {
             name="password"
             id="password"
             required
-            pattern="(?=.*[A-Z])(?=.*\d).{8,}"
+            minlength="11"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{11,}$"
             title="Password must contain at least one uppercase letter, one number, and be at least 8 characters long."
             class="form-control form-control-lg" />
         </div>
@@ -170,6 +173,7 @@ if (isset($_POST['submit'])) {
             name="cpassword"
             id="cpassword"
             required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{11,}$"
             class="form-control form-control-lg" />
           <div class="error-message" id="passwordError"></div>
         </div>
@@ -187,7 +191,6 @@ if (isset($_POST['submit'])) {
    </div>
 </div>
 
-<!-- Bootstrap JS and dependencies (if needed) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
