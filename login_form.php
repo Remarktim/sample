@@ -21,8 +21,8 @@ if (isset($_POST['submit'])) {
    }
 
 };
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,11 +93,10 @@ if (isset($_POST['submit'])) {
    </style>
 </head>
 <body>
-   
 <div class="d-flex flex-column min-vh-100">
    <div class="row justify-content-center">
       <div class="form-control " id="form">
-         <form action="" method="post" id="login" >
+         <form action="" method="post" id="login">
             <h3 class="text-center mb-4">Login Now</h3>
 
             <?php

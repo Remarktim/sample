@@ -48,17 +48,24 @@
       class="container-fluid justify-content-center d-flex p-3 mb-2"
       id="form">
       <div>
-        <a class="btn mx-5" href="login_page.php">Log In</a>
+        <a class="btn mx-5" href="login_form.php">Log In</a>
       </div>
 
       <div>
-        <a class="btn mx-5" href="registration_page.php">Sign Up</a>
+        <a class="btn mx-5" href="register_form.php">Sign Up</a>
       </div>
     </header>
 
     <main>
       <section></section>
     </main>
+    
+    <script>
+    history.pushState(null, null, null);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, null);
+    });
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
