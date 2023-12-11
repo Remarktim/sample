@@ -1,6 +1,5 @@
 <?php
-
-@include 'config.php';
+@include 'connect.php';
 
 session_start();
 
@@ -14,8 +13,8 @@ if (isset($_POST['submit'])) {
 
    if (mysqli_num_rows($result) > 0){
       $row = mysqli_fetch_array($result);
-      $_SESSION['admin_name'] = $row['first_name'];
-      header('location:admin_page.php');
+      $_SESSION['name'] = $row['first_name'];
+      header('location:home_page.php');
      
    }else{
       $error[] = 'incorrect email or password!';
