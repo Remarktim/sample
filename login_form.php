@@ -4,8 +4,7 @@
 
 session_start();
 
-if(isset($_POST['submit'])){
-
+if (isset($_POST['submit'])) {
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $pass = md5($_POST['password']);
 
@@ -13,7 +12,7 @@ if(isset($_POST['submit'])){
 
    $result = mysqli_query($conn, $select);
 
-   if(mysqli_num_rows($result) > 0){
+   if (mysqli_num_rows($result) > 0){
 
       $row = mysqli_fetch_array($result);
 
@@ -22,7 +21,7 @@ if(isset($_POST['submit'])){
          $_SESSION['admin_name'] = $row['name'];
          header('location:admin_page.php');
 
-      }elseif($row['user_type'] == 'user'){
+      } elseif ($row['user_type'] == 'user'){
 
          $_SESSION['user_name'] = $row['name'];
          header('location:user_page.php');
@@ -116,7 +115,7 @@ if(isset($_POST['submit'])){
             <?php
             if(isset($error)){
                foreach($error as $error){
-                  echo '<div class="alert alert-danger" id="error">'.$error.'</div>';
+                  echo '<div class="alert alert-danger form-label" id="error">'.$error.'</div>';
                }
             }
             ?>
@@ -148,6 +147,7 @@ if(isset($_POST['submit'])){
           <input
             type="submit"
             value="Login"
+            name="submit"
             class="btn  btn-lg"
             id="submit" 
             />
