@@ -35,62 +35,7 @@ if (isset($_POST['submit'])) {
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
-   <style>
-      body {
-        background: linear-gradient(
-          180deg,
-          #5e62a1 10%,
-          #8276a5 25%,
-          #997fa7 35%,
-          #b386a7 45%,
-          #d288a5 60%,
-          #f9a08f 80%,
-          #feb573 100%
-        );
-      }
-      h2 {
-        text-align: center;
-      }
-
-      #form {
-        background-color: #833E6B;
-        color: white;
-        border-radius: 2em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        height: auto ;
-        max-width: 25%;
-        transform: translate(-50%, -50%);
-        padding: 20px;
-        transition: 0.6s;
-        border: 0;
-      }
-
-      #form:hover {
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-      }
-
-      #form input {
-        margin-bottom: 10px; 
-      }
-
-      main {
-        backdrop-filter: blur(10px);
-      }
-
-      input{
-        cursor: pointer;
-      }
-
-      #submit{
-        background-color: #826599;
-      }
-      .cols{
-         color: white;
-         text-decoration: none;
-      }
-   </style>
+      <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div class="d-flex flex-column min-vh-100">

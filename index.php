@@ -10,61 +10,43 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
 
-    <style>
-      body {
-        background: linear-gradient(
-          180deg,
-          #5e62a1 10%,
-          #8276a5 25%,
-          #997fa7 35%,
-          #b386a7 45%,
-          #d288a5 60%,
-          #f9a08f 80%,
-          #feb573 100%
-        );
-      }
-      main {
-        max-width: 100%;
-        margin-top: -8px;
-        height: 92.9vh;
-      }
-
-      header {
-        border-bottom: 1px solid;
-      }
-
-      #form div a {
-        background-color: #826599;
-        color: white;
-      }
-
-      #form div a:hover {
-        background-color: #833e6b;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header
       class="container-fluid justify-content-center d-flex p-3 mb-2"
-      id="form">
-      <div>
-        <a class="btn mx-5" href="login_form.php">Log In</a>
+      id="forms">
+      <div class="active">
+        <a class="btn mx-5" href="profile_page.php">Profile</a>
       </div>
 
       <div>
-        <a class="btn mx-5" href="register_form.php">Sign Up</a>
+        <a class="btn mx-5" href="contact_page.php">Contact</a>
       </div>
     </header>
 
-    <main>
-      <section></section>
+    <main class="container d-flex">
+      <section class="container" id="left">
+        <div>
+          <h2>Hi, Welcome to my Website</h2>
+        </div>
+      </section>
+
+      <section class="container" id="right">
+        <div class="btn btn-secondary" id="login">
+          <a class="btn mx-5" href="login_form.php">Log In</a>
+        </div>
+        <div class="btn btn-secondary" id="signup">
+          <a class="btn mx-5" href="register_form.php">Sign Up</a>
+        </div>
+      </section>
     </main>
-    
+
     <script>
-    history.pushState(null, null, null);
-    window.addEventListener('popstate', function () {
+      history.pushState(null, null, null);
+      window.addEventListener("popstate", function () {
         history.pushState(null, null, null);
-    });
+      });
     </script>
 
     <script
