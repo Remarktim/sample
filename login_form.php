@@ -30,12 +30,131 @@ if (isset($_POST['submit'])) {
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Login Form</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
-      <link rel="stylesheet" href="style.css" />
+      <style>
+         body {
+            scroll-behavior: smooth;
+            background: linear-gradient(
+               180deg,
+               #5e62a1 10%,
+               #8276a5 25%,
+               #997fa7 35%,
+               #b386a7 45%,
+               #d288a5 60%,
+               #f9a08f 80%,
+               #feb573 100%
+            );
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            }
+
+            header {
+            border-bottom: 1px solid;
+            }
+
+            #forms div a {
+            background-color: #826599;
+            color: white;
+            border-radius: 2em;
+            padding: 10px 20px;
+            transition: 0.6s;
+            border: 0;
+            text-decoration: none;
+            }
+
+            #forms div a:hover {
+            background-color: #833e6b;
+            }
+            #left {
+            width: 95.5vh;
+            }
+
+            #right {
+            width: 96.3vh;
+            }
+
+            #left div {
+            position: absolute;
+            top: 40%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            color: white;
+            }
+
+            #right #login {
+            position: absolute;
+            top: 40%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            color: white;
+            }
+
+            #right #signup {
+            position: absolute;
+            top: 40%;
+            left: 81%;
+            transform: translate(-50%, -50%);
+            color: white;
+            }
+
+            h2 {
+            text-align: center;
+            }
+
+            #form {
+            background-color: #833e6b;
+            color: white;
+            border-radius: 2em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: auto;
+            max-width: 25%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            transition: 0.6s;
+            border: 0;
+            }
+
+            #form:hover {
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            #form input {
+            margin-bottom: 10px;
+            }
+
+            input {
+            cursor: pointer;
+            }
+
+            #submit {
+            background-color: #826599;
+            }
+            .cols {
+            color: white;
+            text-decoration: none;
+            }
+
+            #button-addon2 {
+            color: black;
+            background-color: white;
+            height: 3em;
+            border: 0;
+            }
+
+            #password, #email{
+               border: 0;
+            }
+
+
+      </style>
 </head>
 <body>
 <div class="d-flex flex-column min-vh-100">
@@ -66,14 +185,19 @@ if (isset($_POST['submit'])) {
           <div class="valid-feedback">
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 ">
           <label for="password" class="form-label">Password</label>
-          <input
+          <div class="input-group mb-3">
+            <input
             type="password"
             name="password"
             id="password"
             required
-            class="form-control form-control-lg" />
+            class="form-control form-control-lg"
+            aria-describedby="button-addon2" />
+            <button class="bi bi-eye-slash btn btn-outline-secondary form-control-lg" id="button-addon2" type="button"></button>
+          </div>
+          
         </div>
         <div class="d-flex justify-content-center">
           <input
@@ -89,6 +213,18 @@ if (isset($_POST['submit'])) {
       </div>
    </div>
 </div>
+
+<script>
+        const togglePassword = document.querySelector("#button-addon2");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            
+            this.classList.toggle("bi-eye");
+        });
+    </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
