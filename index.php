@@ -10,7 +10,73 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        scroll-behavior: smooth;
+        background: linear-gradient(
+          180deg,
+          #5e62a1 10%,
+          #8276a5 25%,
+          #997fa7 35%,
+          #b386a7 45%,
+          #d288a5 60%,
+          #f9a08f 80%,
+          #feb573 100%
+        );
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+      }
+
+      header {
+        border-bottom: 1px solid;
+      }
+
+      #forms div a {
+        background-color: #826599;
+        color: white;
+        border-radius: 2em;
+        padding: 10px 20px;
+        transition: 0.6s;
+        border: 0;
+        text-decoration: none;
+      }
+
+      #forms div a:hover {
+        background-color: #833e6b;
+      }
+      #left {
+        width: 95.5vh;
+      }
+
+      #right {
+        width: 96.3vh;
+      }
+
+      #left div {
+        position: absolute;
+        top: 40%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+
+      #right #login {
+        position: absolute;
+        top: 40%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+
+      #right #signup {
+        position: absolute;
+        top: 40%;
+        left: 81%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <header
@@ -28,7 +94,7 @@
     <main class="container d-flex">
       <section class="container" id="left">
         <div>
-          <h2>Hi, Welcome to my Website</h2>
+          <h2>Hi, <span class="element"></span></h2>
         </div>
       </section>
 
@@ -40,13 +106,23 @@
           <a class="btn mx-5" href="register_form.php">Sign Up</a>
         </div>
       </section>
+      <section></section>
     </main>
-
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
       history.pushState(null, null, null);
       window.addEventListener("popstate", function () {
         history.pushState(null, null, null);
       });
+
+      var typed = new Typed(".element", {
+      strings: ["Welcome To My Landing Page", "Thank You For Visiting"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 1000,
+      loop: true,
+      });
+
     </script>
 
     <script
