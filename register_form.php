@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
         $error[] = 'User already exists!';
     } else {
         if ($password != $cpassword) {
-            $error[] = 'Passwords do not match!';
+            $error[] = 'Password do not match!';
         } else {
             $insert = "INSERT INTO user_form(first_name, last_name, email, phone_number, password) VALUES('$fname','$lname','$email','$number','$password')";
             mysqli_query($conn, $insert);
@@ -232,7 +232,7 @@ if (isset($_POST['submit'])) {
             required
             minlength="11"
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{11,}$"
-            title="Password must contain at least one uppercase letter, one number, and be at least 8 characters long."
+            title="Password must contain at least one uppercase letter, one number, and be at least 11 characters long."
             class="form-control form-control-lg"
             aria-describedby="button-addon2" />
             <button class="bi bi-eye-slash btn btn-outline-secondary form-control-lg" id="button-addon2" type="button"></button>
