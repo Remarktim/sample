@@ -121,7 +121,7 @@ if(!isset($_SESSION['name'])){
 <main>
    <div class="hp">
       <section class="text-center">
-         <h1>Welcome! <span class="element"></span></h1>
+         <h1>Welcome! <span><?php echo $_SESSION['name'] ?></span></h1>
          <h1>Thank you for visiting us</h1>
       </section>
    </div>

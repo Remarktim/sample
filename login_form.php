@@ -173,7 +173,7 @@ if (isset($_POST['submit'])) {
 
          <div class="mb-3 position-relative">
             <div>
-               <label for="email" class="form-label">Username/Email</label>
+               <label for="email" class="form-label">Email</label>
             <input
                type="text"
                name="email"
@@ -197,7 +197,7 @@ if (isset($_POST['submit'])) {
             aria-describedby="button-addon2" />
             <button class="bi bi-eye-slash btn btn-outline-secondary form-control-lg" id="button-addon2" type="button"></button>
           </div>
-          
+           
         </div>
         <div class="d-flex justify-content-center">
           <input

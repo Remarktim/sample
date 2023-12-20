@@ -44,13 +44,7 @@
 
       #forms div a:hover {
         background-color: #833e6b;
-      }
-      #left {
-        width: 95.5vh;
-      }
-
-      #right {
-        width: 96.3vh;
+        transform: scale(1.2);
       }
 
       #left div {
@@ -61,20 +55,30 @@
         color: white;
       }
 
-      #right #login {
+      #login {
         position: absolute;
-        top: 40%;
-        left: 70%;
-        transform: translate(-50%, -50%);
+        top: 38%;
+        left: 65%;
         color: white;
+        background-color: #5e62a1;
+        transition: transform 0.4s;
+        padding: 13px 50px;
       }
 
-      #right #signup {
+      #signup {
         position: absolute;
-        top: 40%;
-        left: 81%;
-        transform: translate(-50%, -50%);
+        top: 38%;
+        left: 75%;
         color: white;
+        background-color: #5e62a1;
+        transition: transform 0.4s;
+        padding: 13px 50px;
+      }
+
+      #signup:hover,
+      #login:hover {
+        cursor: pointer;
+        transform: scale(1.2);
       }
     </style>
   </head>
@@ -98,13 +102,11 @@
         </div>
       </section>
 
-      <section class="container" id="right">
-        <div class="btn btn-secondary" id="login">
-          <a class="btn mx-5" href="login_form.php">Log In</a>
-        </div>
-        <div class="btn btn-secondary" id="signup">
-          <a class="btn mx-5" href="register_form.php">Sign Up</a>
-        </div>
+      <section>
+        <a id="login" class="btn mx-5 btn-lg" href="login_form.php">Log In</a>
+        <a id="signup" class="btn mx-5 btn-lg" href="register_form.php"
+          >Sign Up</a
+        >
       </section>
       <section></section>
     </main>
@@ -116,13 +118,12 @@
       });
 
       var typed = new Typed(".element", {
-      strings: ["Welcome To My Landing Page", "Thank You For Visiting"],
-      typeSpeed: 50,
-      backSpeed: 50,
-      backDelay: 1000,
-      loop: true,
+        strings: ["Welcome To My Landing Page", "Thank You For Visiting"],
+        typeSpeed: 50,
+        backSpeed: 50,
+        backDelay: 1000,
+        loop: true,
       });
-
     </script>
 
     <script
