@@ -40,21 +40,22 @@ if(!isset($_SESSION['name'])){
          }
 
          header {
-            border-bottom: 1px solid;
+        border-bottom: 1px solid;
          }
 
          #forms div a {
-            background-color: #826599;
-            color: white;
-            border-radius: 2em;
-            padding: 10px 20px;
-            transition: 0.6s;
-            border: 0;
-            text-decoration: none;
+         background-color: #826599;
+         color: white;
+         border-radius: 2em;
+         padding: 10px 20px;
+         transition: 0.6s;
+         border: 0;
+         text-decoration: none;
          }
 
          #forms div a:hover {
-            background-color: #833e6b;
+         background-color: #833e6b;
+         transform: scale(1.2);
          }
          #left {
             width: 95.5vh;
@@ -96,11 +97,21 @@ if(!isset($_SESSION['name'])){
             transform: translate(-50%, -50%);
          }
 
-         .logout{
-            position: absolute;
-            left: 97%;
-            bottom: 0;
-            transform: translate(-50%, -50%);
+         .logout {
+         position: absolute;
+         left: 97%;
+         bottom: 0;
+         transform: translate(-50%, -50%);
+         }
+         #logout {
+         background-color: #833e6b;
+         border: 0;
+         transition: 0.5s;
+         }
+
+         #logout:hover {
+         color: rgb(255, 255, 255);
+         transform: scale(1.1);
          }
       </style>
    
@@ -126,9 +137,9 @@ if(!isset($_SESSION['name'])){
       </section>
    </div>
    
-   <div class="logout"> 
-      <a href="logout.php" class="btn btn-secondary">logout</a>
-   </div>   
+   <footer class="logout">
+      <a id="logout" href="logout.php" class="btn btn-secondary">logout</a>
+    </footer> 
 </main>
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
@@ -139,14 +150,6 @@ if(!isset($_SESSION['name'])){
     window.addEventListener('popstate', function () {
         history.pushState(null, null, null);
     });
-
-    var typed = new Typed(".element", {
-      strings: [<?php echo $_SESSION['name'] ?>],
-      typeSpeed: 50,
-      backSpeed: 50,
-      backDelay: 1000,
-      loop: true,
-      });
 </script>
 </body>
 </html>

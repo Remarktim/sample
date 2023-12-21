@@ -104,33 +104,18 @@
       h2, h3{
         color: white;
       }
-
-      .icon a {
-        position: absolute;
-        top: 1.5%;
-        left: 0.8%;
-      }
     </style>
   </head>
   <body>
-    <div class="icon">
-      <a href="home_page.php">
-        <img
-          width="48"
-          height="48"
-          src="https://img.icons8.com/fluency-systems-filled/48/exterior.png"
-          alt="exterior" />
-      </a>
-    </div>
     <header
       class="container-fluid justify-content-center d-flex p-3 mb-2"
       id="forms">
       <div>
-        <a class="btn mx-5" href="profile_page.php">Profile</a>
+        <a class="btn mx-5" href="profile_page_pub.php">Profile</a>
       </div>
 
       <div>
-        <a class="btn mx-5 active" href="contact_page.php">Contact</a>
+        <a class="btn mx-5 active" href="contact_page_pub.php">Contact</a>
       </div>
     </header>
     <main>
@@ -149,7 +134,7 @@
     </main>
 
     <footer class="logout">
-      <a id="logout" href="logout.php" class="btn btn-secondary">logout</a>
+      <a id="logout" href="index.php" class="btn btn-secondary">Back</a>
     </footer>
   </body>
 </html>

@@ -87,11 +87,11 @@
       class="container-fluid justify-content-center d-flex p-3 mb-2"
       id="forms">
       <div class="active">
-        <a class="btn mx-5" href="profile_page.php">Profile</a>
+        <a class="btn mx-5" href="profile_page_pub.php">Profile</a>
       </div>
 
       <div>
-        <a class="btn mx-5" href="contact_page.php">Contact</a>
+        <a class="btn mx-5" href="contact_page_pub.php">Contact</a>
       </div>
     </header>
 
@@ -108,7 +108,6 @@
           >Sign Up</a
         >
       </section>
-      <section></section>
     </main>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
